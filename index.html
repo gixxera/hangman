@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-
 <html>
-  <head> </head>
 
-  <body>
-    <p id="puzzle"></p>
+<head>
+  <title>Hangman</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="favicon.png" rel="icon">
+</head>
+
+<body>
+  <div>
+    <div id="puzzle" class="puzzle"></div>
     <p id="guesses"></p>
-    <script src="hangman.js"></script>
-    <script src="app.js"></script>
-  </body>
+    <button id="reset" class="button">Reset</button>
+  </div>
+  <script src="requests.js"></script>
+  <script src="hangman.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>
