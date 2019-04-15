@@ -20,7 +20,7 @@ const render = () => {
 }
 
 const startGame = async () => {
-  const puzzle = await getPuzzle('2');
+  const puzzle = await getPuzzle();
   let allowedGuesses = 0;
   const splitPuzzle = puzzle.split('');
   if (splitPuzzle.length > 8) {
