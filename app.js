@@ -21,7 +21,14 @@ const render = () => {
 
 const startGame = async () => {
   const puzzle = await getPuzzle('2');
-  game = new Hangman(puzzle, 5);
+  let allowedGuesses = 0;
+  const splitPuzzle = puzzle.split('');
+  if (splitPuzzle.length > 8) {
+    allowedGuesses = splitPuzzle.length / 3;
+  } else {
+    allowedGuesses = 3;
+  }
+  game = new Hangman(puzzle, Math.ceil(allowedGuesses));
   render();
 }
 
